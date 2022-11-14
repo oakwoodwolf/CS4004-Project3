@@ -1,5 +1,5 @@
 public class Room {
-    public int capacity = 32;
+    private int capacity = 32;
     public String name = "";
     public Room(){
 
@@ -12,5 +12,9 @@ public class Room {
     @Override
     public String toString() {
         return name;
+    }
+
+    public int getCapacity() {
+        return capacity;
     }
 }
