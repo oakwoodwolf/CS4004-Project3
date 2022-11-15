@@ -34,5 +34,9 @@ public class MeetingSetup {
         second.addAttendant(johnny);
 
     }
-
+    public void addMeeting(Meeting meeting,String password){
+        if (password.contentEquals("ULCSIS02")){
+            meetings.add(meeting);
+        } else System.out.println("Only staff can add meetings");
+    }
 }

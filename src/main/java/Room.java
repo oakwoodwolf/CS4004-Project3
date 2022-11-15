@@ -1,6 +1,6 @@
 public class Room {
     private int capacity = 32;
-    public String name = "";
+    public String name = " ";
     public Room(){
 
     }

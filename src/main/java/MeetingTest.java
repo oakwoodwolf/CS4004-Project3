@@ -48,7 +48,7 @@ class MeetingTest {
     @Test
     void checkPassword(){
         for (int i = 0; i < m.meetings.size(); i++){
-            assertTrue(m.meetings.get(i).getEmployeePassword().equals("ULCSIS02"));
+            assertTrue(m.meetings.get(i).getEmployeePassword().contentEquals("ULCSIS02"));
         }
     }
 }

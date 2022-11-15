@@ -30,17 +30,12 @@ public class Meeting
     }
 
     public Meeting(String description, Room room, LocalDate appointDate, LocalTime timeFrom, LocalTime timeTo, String employeePassword) {
-        if (this.employeePassword.equals(employeePassword)) {
             this.description = description;
             this.room = room;
             this.appointDate = appointDate;
             this.timeFrom = timeFrom;
             this.timeTo = timeTo;
             this.employeePassword = employeePassword;
-        } else {
-            System.out.println("Only employees can create meetings. Insert correct password.");
-            return;
-        }
     }
 
     public String getDescription() {
