@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Test Class attempt 3">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
+    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Added MeetingSetup">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MeetingTest">
+    <configuration name="MeetingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MeetingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MeetingTest.CheckIfEmptyAttendants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -75,6 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MeetingTest" />
         <item itemvalue="JUnit.MeetingTest.CheckIfEmptyAttendants" />
       </list>
     </recent_temporary>
@@ -116,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668449957340</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added MeetingSetup">
+      <created>1668512258498</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1668512258498</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -137,6 +158,7 @@
     <MESSAGE value="Test Class attempt" />
     <MESSAGE value="Test Class attempt 2" />
     <MESSAGE value="Test Class attempt 3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Class attempt 3" />
+    <MESSAGE value="Added MeetingSetup" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added MeetingSetup" />
   </component>
 </project>

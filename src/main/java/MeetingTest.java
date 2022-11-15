@@ -8,20 +8,33 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MeetingTest {
-    ArrayList<Room> rooms = new ArrayList<>();
-    Room compApple = new Room("Apple Computer Room", 24);
-
-    ArrayList<Meeting> meetings = new ArrayList<Meeting>();
-    Meeting first = new Meeting("Orientation", rooms.get(1), LocalDate.now(), LocalTime.now(), LocalTime.now().plusHours(1), "ULCSIS02");
-    Meeting second = new Meeting("Orientation Group 2", rooms.get(2), LocalDate.now(), LocalTime.now(), LocalTime.now().plusHours(1), "ULCSIS02");
-
-    ArrayList<Person> attendants = new ArrayList<Person>();
-    Person john = new Person("Doe", "John", "894984195");
-    Person johnny = new Person("Doe", "John", "864674228");
-
+    MeetingSetup m = new MeetingSetup();
     @Test
     void CheckIfEmptyAttendants() {
-        assertTrue(attendants.isEmpty());
+        assertFalse(m.attendants.isEmpty(), "The meeting isn't empty");
+    }
+    @Test
+    void CheckThatAttendantsLessThanCapacity(){
+        for (int i = 0; i < m.meetings.size(); i++){
+            assertTrue(m.meetings.get(i).getAttendants().size() <= m.meetings.get(i).getRoom().getCapacity());
+        }
+    }
+    @Test
+    void CheckThatPhoneNumberIsntRepeated(){
+        int containsDupe = 0;
+        ArrayList<String> temp = new ArrayList<>();
+        for (int i =0; i < m.meetings.size(); i++){
+            temp.clear();
+            for (int j=0; j < m.meetings.get(i).getAttendants().size(); j++){
+                if (temp.contains(m.meetings.get(i).getAttendants().get(j).getPhoneNumber())){
+                    containsDupe = 1;
+                } else
+                {
+                    temp.add(m.meetings.get(i).getAttendants().get(j).getPhoneNumber());
+                }
+            }
+        }
+        assertEquals(0, containsDupe);
     }
 
     @Test

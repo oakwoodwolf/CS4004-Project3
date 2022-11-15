@@ -15,6 +15,6 @@ public class Room {
     }
 
     public int getCapacity() {
-        return capacity;
+        return this.capacity;
     }
 }

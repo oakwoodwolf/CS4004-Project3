@@ -21,11 +21,11 @@ public class Meeting
     }
 
     public Meeting(String description, Room room, LocalDate appointDate, LocalTime timeFrom, LocalTime timeTo, ArrayList<Person> people) {
-        description = this.description;
-        room = this.room;
-        appointDate = this.appointDate;
-        timeFrom = this.timeFrom;
-        timeTo = this.timeTo;
+        this.description = description;
+        this.room = room;
+        this.appointDate = appointDate;
+        this.timeFrom = timeFrom;
+        this.timeTo = timeTo;
         attendants = people;
     }
 
@@ -94,7 +94,7 @@ public class Meeting
         }
 
         public Room getRoom () {
-            return room;
+            return this.room;
         }
 
         public void setTimeFrom (LocalTime timeFrom){
