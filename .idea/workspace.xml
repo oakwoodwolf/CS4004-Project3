@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Please help me">
+    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Updated time bounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Meeting.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668517647766</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Updated time bounds">
+      <created>1668525070017</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668525070017</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -181,6 +187,7 @@
     <MESSAGE value="Added MeetingSetup" />
     <MESSAGE value="Added 2 Tests" />
     <MESSAGE value="Please help me" />
-    <option name="LAST_COMMIT_MESSAGE" value="Please help me" />
+    <MESSAGE value="Updated time bounds" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated time bounds" />
   </component>
 </project>

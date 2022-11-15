@@ -27,7 +27,7 @@ class MeetingTest {
             temp.clear();
             for (int j=0; j < m.meetings.get(i).getAttendants().size(); j++){
                 if (temp.contains(m.meetings.get(i).getAttendants().get(j).getPhoneNumber())){
-                    containsDupe = 1;
+                    containsDupe++;
                 } else
                 {
                     temp.add(m.meetings.get(i).getAttendants().get(j).getPhoneNumber());

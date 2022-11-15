@@ -52,7 +52,7 @@ public class Meeting
     public void addAttendant(String forename, String surname, String phoneNumber) {
         int match = 0;
         for (int i = 0; i < attendants.size(); i++) {
-            if (Objects.equals(attendants.get(i).getPhoneNumber(), phoneNumber)) {
+            if (attendants.get(i).getPhoneNumber().contentEquals(phoneNumber)) {
                 match++;
             }
         }
@@ -65,13 +65,12 @@ public class Meeting
 
     public void addAttendant(Person attendee) {
         int match = 0;
-        for (int i = 0; i < attendants.size(); i++) {
-            if (Objects.equals(attendants.get(i).getPhoneNumber(), attendee.getPhoneNumber())) {
+        for (Person attendant : attendants) {
+            if (attendant.getPhoneNumber().contentEquals(attendee.getPhoneNumber()) ) {
                 match++;
             }
         }
         if (match == 0) {
-
             attendants.add(attendee);
         }
     }
