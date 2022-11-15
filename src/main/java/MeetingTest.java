@@ -1,5 +1,7 @@
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -36,7 +38,24 @@ class MeetingTest {
         }
         assertEquals(0, containsDupe);
     }
-
+    Meeting nm;
+    @BeforeEach
+    void setUp()
+    {
+        nm = new Meeting();
+    }
+    @ParameterizedTest
+    @ValueSource(ints = {33,50,69})
+    void getAttendantsOverLimit(int number)
+    {
+        assertEquals(0,nm.getAttendantsNumber(number),"The room is not big enough");
+    }
+    @ParameterizedTest
+    @ValueSource(ints = {1,14,32})
+    void getAttendantsUnderLimit(int number)
+    {
+        assertEquals(1,nm.getAttendantsNumber(number),"The room is big enough");
+    }
     @Test
     void checkTimeBounds() {
         for (int i = 0; i < m.meetings.size(); i++){
@@ -53,4 +72,10 @@ class MeetingTest {
          assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), ""), "Using null password.");
          assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
         }
+    @ParameterizedTest
+    @ValueSource(strings = {"20:00:00"})
+    void checkRepeatTime(String st1)
+    {
+        assertTrue(nm.checkTimeCoincidence(st1));
+    }
 }

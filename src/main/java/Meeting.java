@@ -1,5 +1,9 @@
+import java.security.Timestamp;
+import java.text.ParseException;
 import java.time.*;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Meeting
@@ -36,7 +40,6 @@ public class Meeting
             this.timeFrom = timeFrom;
             this.timeTo = timeTo;
     }
-
     public String getDescription() {
         return description;
     }
@@ -74,7 +77,15 @@ public class Meeting
             attendants.add(attendee);
         }
     }
-
+    public int getAttendantsNumber(int number)
+    {
+        if(number > 32)
+            return 0;
+        else if(number == 0)
+            return 0;
+        else
+            return 1;
+    }
         public LocalDate getAppointDate() {
             return appointDate;
         }
@@ -99,10 +110,24 @@ public class Meeting
             this.timeTo = timeTo;
         }
 
-        public void setRoom (Room room){
+    public void setRoom (Room room){
             this.room = room;
         }
-
+    public boolean checkTimeCoincidence(String st1)
+    {
+        String st =new String("09:00:00");
+        String ed=new String("11:00:00");
+        if(st.compareTo(st1)==0&&ed.compareTo(st1)==0)
+        {
+            System.out.println("The time is available");
+            return true;
+        }
+        else
+        {
+            System.out.println("The time is not available, please choose another time" );
+            return false;
+        }
+    }
         @Override
         public String toString () {
             return "Meeting{" +
