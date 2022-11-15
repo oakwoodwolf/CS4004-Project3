@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Meeting
 {
     public String description = "";
-    public String employeePassword = "ULCSIS02";
+    public String employeePassword = "";
     public Room room;
     public LocalDate appointDate = LocalDate.now();
     public LocalTime timeFrom = LocalTime.now();
@@ -31,11 +31,12 @@ public class Meeting
 
     public Meeting(String description, Room room, LocalDate appointDate, LocalTime timeFrom, LocalTime timeTo, String employeePassword) {
         if (this.employeePassword.equals(employeePassword)) {
-            description = this.description;
-            room = this.room;
-            appointDate = this.appointDate;
-            timeFrom = this.timeFrom;
-            timeTo = this.timeTo;
+            this.description = description;
+            this.room = room;
+            this.appointDate = appointDate;
+            this.timeFrom = timeFrom;
+            this.timeTo = timeTo;
+            this.employeePassword = employeePassword;
         } else {
             System.out.println("Only employees can create meetings. Insert correct password.");
             return;

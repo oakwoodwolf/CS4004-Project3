@@ -23,7 +23,7 @@ public class MeetingSetup {
 
         Meeting first = new Meeting("Orientation", rooms.get(0), LocalDate.now(), LocalTime.now(), LocalTime.now().plusHours(1), "ULCSIS02");
         Meeting second = new Meeting("Orientation Group 2", rooms.get(1), LocalDate.now(), LocalTime.now().minusHours(1), LocalTime.now().plusMinutes(30), "ULCSIS02");
-
+        meetings.add(first); meetings.add(second);
 
         Person john = new Person("Doe", "John", "894984195");
         Person johnny = new Person("Doe", "John", "864674228");
@@ -32,7 +32,6 @@ public class MeetingSetup {
         first.addAttendant(john);
         first.addAttendant(johnny);
         second.addAttendant(johnny);
-        meetings.add(first); meetings.add(second);
 
     }
 

@@ -38,6 +38,17 @@ class MeetingTest {
     }
 
     @Test
-    void getAppointDate() {
+    void checkTimeBounds() {
+        for (int i = 0; i < m.meetings.size(); i++){
+            assertTrue(((m.meetings.get(i).timeTo.getHour() <= 23) && (m.meetings.get(i).timeTo.getHour() >= 0)));
+            assertTrue(((m.meetings.get(i).timeFrom.getHour() <= 23) && (m.meetings.get(i).timeFrom.getHour() >= 0)));
+            assertTrue((m.meetings.get(i).timeFrom.isBefore(m.meetings.get(i).timeTo)));
+        }
+    }
+    @Test
+    void checkPassword(){
+        for (int i = 0; i < m.meetings.size(); i++){
+            assertTrue(m.meetings.get(i).getEmployeePassword().equals("ULCSIS02"));
+        }
     }
 }
