@@ -29,13 +29,12 @@ public class Meeting
         attendants = people;
     }
 
-    public Meeting(String description, Room room, LocalDate appointDate, LocalTime timeFrom, LocalTime timeTo, String employeePassword) {
+    public Meeting(String description, Room room, LocalDate appointDate, LocalTime timeFrom, LocalTime timeTo) {
             this.description = description;
             this.room = room;
             this.appointDate = appointDate;
             this.timeFrom = timeFrom;
             this.timeTo = timeTo;
-            this.employeePassword = employeePassword;
     }
 
     public String getDescription() {

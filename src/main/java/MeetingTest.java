@@ -40,15 +40,17 @@ class MeetingTest {
     @Test
     void checkTimeBounds() {
         for (int i = 0; i < m.meetings.size(); i++){
-            assertTrue(((m.meetings.get(i).timeTo.getHour() <= 23) && (m.meetings.get(i).timeTo.getHour() >= 0)));
-            assertTrue(((m.meetings.get(i).timeFrom.getHour() <= 23) && (m.meetings.get(i).timeFrom.getHour() >= 0)));
-            assertTrue((m.meetings.get(i).timeFrom.isBefore(m.meetings.get(i).timeTo)));
+            assertTrue(((m.meetings.get(i).timeTo.getHour() <= 23) && (m.meetings.get(i).timeTo.getHour() >= 0)), "Test bounds for Time to");
+            assertTrue(((m.meetings.get(i).timeFrom.getHour() <= 23) && (m.meetings.get(i).timeFrom.getHour() >= 0)), "Test bounds for Time from");
+            assertTrue((m.meetings.get(i).timeFrom.isBefore(m.meetings.get(i).timeTo)), "Test that the from time is before the to time");
         }
     }
-    @Test
-    void checkPassword(){
-        for (int i = 0; i < m.meetings.size(); i++){
-            assertTrue(m.meetings.get(i).getEmployeePassword().contentEquals("ULCSIS02"));
+        @Test
+        void checkPassword()
+        {
+         assertTrue(m.addMeeting(new Meeting("Sample", m.rooms.get(1), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "ULCSIS02"), "Using correct password");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "ULCSIS01"), "Using incorrect password");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), ""), "Using null password.");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
         }
-    }
 }
