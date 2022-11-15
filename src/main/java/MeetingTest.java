@@ -44,18 +44,7 @@ class MeetingTest {
     {
         nm = new Meeting();
     }
-    @ParameterizedTest
-    @ValueSource(ints = {33,50,69})
-    void getAttendantsOverLimit(int number)
-    {
-        assertEquals(0,nm.getAttendantsNumber(number),"The room is not big enough");
-    }
-    @ParameterizedTest
-    @ValueSource(ints = {1,14,32})
-    void getAttendantsUnderLimit(int number)
-    {
-        assertEquals(1,nm.getAttendantsNumber(number),"The room is big enough");
-    }
+
     @Test
     void checkTimeBounds() {
         for (int i = 0; i < m.meetings.size(); i++){
