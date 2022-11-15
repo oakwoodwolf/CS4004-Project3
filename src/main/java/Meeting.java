@@ -113,11 +113,11 @@ public class Meeting
     public void setRoom (Room room){
             this.room = room;
         }
-    public boolean checkTimeCoincidence(String st1)
+    public boolean checkAvailability(LocalTime st1)
     {
-        String st =new String("09:00:00");
-        String ed=new String("11:00:00");
-        if(st.compareTo(st1)==0&&ed.compareTo(st1)==0)
+        LocalTime st =new LocalTime.of(09,00,00);
+        LocalTime ed=new LocalTime.of(23,00,00);
+        if(st.isBefore(st1) && st1.isBefore(ed))
         {
             System.out.println("The time is available");
             return true;

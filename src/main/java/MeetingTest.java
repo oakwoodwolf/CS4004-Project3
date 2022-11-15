@@ -73,9 +73,9 @@ class MeetingTest {
          assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
         }
     @ParameterizedTest
-    @ValueSource(strings = {"20:00:00"})
-    void checkRepeatTime(String st1)
+    @ValueSource(LocalTime = LocalTime.of(20,00,00))
+    void checkRepeatTime(LocalTime st1)
     {
-        assertTrue(nm.checkTimeCoincidence(st1));
+        assertTrue(nm.checkAvailability(st1));
     }
 }
