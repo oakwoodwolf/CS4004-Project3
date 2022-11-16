@@ -18,7 +18,7 @@ public class Meeting
 
     public Meeting() {
         description = "New meeting";
-        room = new Room("CS1-044", 32);
+        room = new Room("CS1-044", 32,true,5);
         appointDate = LocalDate.now();
         timeFrom = LocalTime.now();
         timeTo = LocalTime.of(19, 30);
@@ -115,8 +115,8 @@ public class Meeting
         }
     public boolean checkAvailability(LocalTime st1)
     {
-        LocalTime st =new LocalTime.of(09,00,00);
-        LocalTime ed=new LocalTime.of(23,00,00);
+        LocalTime st = LocalTime.of(9, 00, 00);
+        LocalTime ed =  LocalTime.of(23,00,00);
         if(st.isBefore(st1) && st1.isBefore(ed))
         {
             System.out.println("The time is available");

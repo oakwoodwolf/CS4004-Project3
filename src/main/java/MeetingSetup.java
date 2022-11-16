@@ -11,15 +11,15 @@ public class MeetingSetup {
     }
     public void setUp(){
 
-        Room compApple = new Room("Apple Computer Room", 24);
+        Room compApple = new Room("Apple Computer Room", 24,true,1);
         rooms.add(compApple);
-        Room compWindows = new Room("Windows Computer Lab", 24);
+        Room compWindows = new Room("Windows Computer Lab", 24,true,2);
         rooms.add(compWindows);
-        Room conference_room = new Room("Conference Room", 48);
+        Room conference_room = new Room("Conference Room", 48,true,3);
         rooms.add(conference_room);
-        Room office0 = new Room("Manager's Office", 4);
+        Room office0 = new Room("Manager's Office", 4,true,4);
         rooms.add(office0);
-        Room online = new Room("Online [Microsoft Teams]", 128);
+        Room online = new Room("Online [Microsoft Teams]", 128,true,5);
         rooms.add(online);
 
 

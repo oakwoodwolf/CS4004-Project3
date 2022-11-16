@@ -7,7 +7,9 @@
     <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Updated time bounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +18,10 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OPEN_IN_BROWSER" value="true" />
+    <option name="OUTPUT_DIRECTORY" value="C:\Users\Emontina\Downloads" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,16 +48,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "E:/Code/java/CS4004Project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Emontina/Downloads&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -66,9 +72,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MeetingTest.getAttendantsUnderLimit">
+  <component name="RunManager" selected="JUnit.MeetingTest">
     <configuration name="MeetingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
+      <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -76,21 +82,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest.CheckIfEmptyAttendants" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
+    <configuration name="MeetingTest.CheckThatAttendantsLessThanCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="CheckIfEmptyAttendants" />
+      <option name="METHOD_NAME" value="CheckThatAttendantsLessThanCapacity" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest.getAttendantsUnderLimit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MeetingTest.CheckThatPhoneNumberIsntRepeated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="getAttendantsUnderLimit(int)" />
+      <option name="METHOD_NAME" value="CheckThatPhoneNumberIsntRepeated" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MeetingTest.checkPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS4004-Project3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MeetingTest" />
+      <option name="METHOD_NAME" value="checkPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MeetingTest.checkTimeBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS4004-Project3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MeetingTest" />
+      <option name="METHOD_NAME" value="checkTimeBounds" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,9 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MeetingTest.getAttendantsUnderLimit" />
         <item itemvalue="JUnit.MeetingTest" />
-        <item itemvalue="JUnit.MeetingTest.CheckIfEmptyAttendants" />
+        <item itemvalue="JUnit.MeetingTest.CheckThatAttendantsLessThanCapacity" />
+        <item itemvalue="JUnit.MeetingTest.CheckThatPhoneNumberIsntRepeated" />
+        <item itemvalue="JUnit.MeetingTest.checkTimeBounds" />
+        <item itemvalue="JUnit.MeetingTest.checkPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -113,7 +141,9 @@
       <option name="presentableId" value="Default" />
       <updated>1668349507543</updated>
       <workItem from="1668543555148" duration="206000" />
-      <workItem from="1668543772261" duration="4521000" />
+      <workItem from="1668543772261" duration="5835000" />
+      <workItem from="1668607271691" duration="4857000" />
+      <workItem from="1668633946097" duration="2149000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1668349534659</created>
@@ -184,6 +214,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -207,5 +248,8 @@
     <MESSAGE value="Please help me" />
     <MESSAGE value="Updated time bounds" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated time bounds" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/CS4004_Project3$MeetingTest.ic" NAME="MeetingTest Coverage Results" MODIFIED="1668612669556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

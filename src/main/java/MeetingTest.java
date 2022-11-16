@@ -7,6 +7,7 @@ import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
 
+import static java.time.LocalTime.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MeetingTest {
@@ -56,15 +57,15 @@ class MeetingTest {
         @Test
         void checkPassword()
         {
-         assertTrue(m.addMeeting(new Meeting("Sample", m.rooms.get(1), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "ULCSIS02"), "Using correct password");
-         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "ULCSIS01"), "Using incorrect password");
-         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), ""), "Using null password.");
-         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  LocalTime.now().minusHours(1), LocalTime.now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
+         assertTrue(m.addMeeting(new Meeting("Sample", m.rooms.get(1), LocalDate.now(),  now().minusHours(1), now()), "ULCSIS02"), "Using correct password");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  now().minusHours(1), now()), "ULCSIS01"), "Using incorrect password");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  now().minusHours(1), now()), ""), "Using null password.");
+         assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  now().minusHours(1), now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
         }
-    @ParameterizedTest
-    @ValueSource(LocalTime = LocalTime.of(20,00,00))
-    void checkRepeatTime(LocalTime st1)
+    //@ParameterizedTest
+    //@ValueSource((20,00,00))
+    //void checkRepeatTime(LocalTime st1)
     {
-        assertTrue(nm.checkAvailability(st1));
+        //assertTrue(nm.checkAvailability(st1));
     }
 }
