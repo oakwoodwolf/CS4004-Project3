@@ -1,10 +1,7 @@
-import java.security.Timestamp;
-import java.text.ParseException;
+import org.junit.jupiter.api.function.Executable;
+
 import java.time.*;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
 
 public class Meeting
 {
@@ -90,7 +87,11 @@ public class Meeting
             return appointDate;
         }
 
-        public LocalTime getTimeFrom() {
+    public void setAppointDate(LocalDate appointDate) throws DateTimeException {
+        this.appointDate = appointDate;
+    }
+
+    public LocalTime getTimeFrom() {
             return timeFrom;
         }
 

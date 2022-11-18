@@ -3,6 +3,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
+import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -52,6 +53,19 @@ class MeetingTest {
             assertTrue(((m.meetings.get(i).timeTo.getHour() <= 23) && (m.meetings.get(i).timeTo.getHour() >= 0)), "Test bounds for Time to");
             assertTrue(((m.meetings.get(i).timeFrom.getHour() <= 23) && (m.meetings.get(i).timeFrom.getHour() >= 0)), "Test bounds for Time from");
             assertTrue((m.meetings.get(i).timeFrom.isBefore(m.meetings.get(i).timeTo)), "Test that the from time is before the to time");
+        }
+    }
+    @Test
+    void checkDateBounds(){
+        for (Meeting meeting: m.meetings){
+            assertFalse(meeting.getAppointDate().lengthOfMonth() > 31);
+            assertFalse(meeting.getAppointDate().lengthOfYear() > 366);
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,2,29));}, "Check if it throws this exception when using 29th of february on a leap year");
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,2,0));}, "0th Day of a month");
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,1,32));}, "32th Day of a month");
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,6,31));}, "31st of a month with only 30 days");
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,13,30));}, "13th Month");
+            assertThrows(DateTimeException.class, () -> {meeting.setAppointDate(LocalDate.of(2019,0,30));}, "0th Month");
         }
     }
         @Test
