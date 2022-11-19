@@ -5,6 +5,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import static java.time.LocalTime.*;;
 import static org.junit.jupiter.api.Assertions.*;
@@ -71,13 +72,31 @@ class MeetingTest {
         @ValueSource(ints = {1,3,5})
         void checkRoomStatus(int n)
         {
-            assertEquals(true,m.getRoomNumber(n),"Room is available");
+            assertTrue(m.getRoomNumber(n),"Room is available");
 
         }
         @ParameterizedTest
         @ValueSource(ints = {2,4})
         void checkUnavailableRoomStatus(int n)
         {
-            assertEquals(false,m.getRoomNumber(n),"Room is not available");
+            assertFalse(m.getRoomNumber(n),"Room is not available");
+        }
+        @ParameterizedTest
+        @ValueSource(ints = {1,15,24})
+        void checkDeposit(int p)
+        {
+            assertEquals(5,m.getDepositNumber(p),"Please hand in your deposit");
+        }
+        @ParameterizedTest
+        @ValueSource(ints = {25,35,48})
+        void checkMoreDeposit(int p)
+        {
+            assertEquals(10,m.getDepositNumber(p),"Please hand in your deposit");
+        }
+        @ParameterizedTest
+        @ValueSource(ints = {1,5,10})
+        void changeMeetingDate(int t)
+        {
+            assertEquals(LocalDate.of(2022,11,19+t),m.changeDate(t));
         }
 }

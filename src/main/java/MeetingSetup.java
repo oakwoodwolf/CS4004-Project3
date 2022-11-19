@@ -1,6 +1,9 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 public class MeetingSetup {
     ArrayList<Meeting> meetings = new ArrayList<Meeting>();
@@ -47,6 +50,17 @@ public class MeetingSetup {
             return true;
         } else System.out.println("Only staff can add meetings"); return false;
     }
+    public String changeDate(int t)
+    {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        System.out.println("Current Date Time : " + dateFormat.format(cal.getTime()));
+        cal =Calendar.getInstance();
+        cal.add(Calendar.DATE,t);
+        return dateFormat.format(cal.getTime());
+
+
+    }
     public boolean getRoomNumber(int n)
     {
         if(n==1)
@@ -62,5 +76,14 @@ public class MeetingSetup {
         else
             return false;
 
+    }
+    public int getDepositNumber(int p)
+    {
+        if(p<=24&&p>0)
+            return 5;
+        if(p<=48)
+            return 10;
+        else
+            return 0;
     }
 }

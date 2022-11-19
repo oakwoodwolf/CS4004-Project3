@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,33 +71,32 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MeetingTest.checkUnavailableRoomStatus">
-    <configuration name="MeetingTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.MeetingTest.changeMeetingDate">
+    <configuration name="MeetingTest.changeMeetingDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="changeMeetingDate(int)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
+    <configuration name="MeetingTest.checkDeposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="checkDeposit(int)" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest.CheckThatAttendantsLessThanCapacity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MeetingTest.checkMoreDeposit" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="CheckThatAttendantsLessThanCapacity" />
+      <option name="METHOD_NAME" value="checkMoreDeposit(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -126,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MeetingTest.changeMeetingDate" />
+        <item itemvalue="JUnit.MeetingTest.checkMoreDeposit" />
+        <item itemvalue="JUnit.MeetingTest.checkDeposit" />
         <item itemvalue="JUnit.MeetingTest.checkUnavailableRoomStatus" />
         <item itemvalue="JUnit.MeetingTest.checkRoomStatus" />
-        <item itemvalue="JUnit.MeetingTest (1)" />
-        <item itemvalue="JUnit.MeetingTest" />
-        <item itemvalue="JUnit.MeetingTest.CheckThatAttendantsLessThanCapacity" />
       </list>
     </recent_temporary>
   </component>
@@ -146,7 +144,7 @@
       <workItem from="1668543772261" duration="5835000" />
       <workItem from="1668607271691" duration="4857000" />
       <workItem from="1668633946097" duration="2149000" />
-      <workItem from="1668882210415" duration="1610000" />
+      <workItem from="1668882210415" duration="5100000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1668349534659</created>
@@ -251,6 +249,21 @@
     <MESSAGE value="Please help me" />
     <MESSAGE value="Updated time bounds" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated time bounds" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/MeetingTest.java</url>
+          <line>97</line>
+          <properties class="MeetingTest" method="changeMeetingDate">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/CS4004_Project3$MeetingTest.ic" NAME="MeetingTest Coverage Results" MODIFIED="1668612669556" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
