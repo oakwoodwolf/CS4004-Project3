@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Phone Check validation">
+    <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Updated time bounds">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Meeting.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Meeting.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Room.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +41,7 @@
   </component>
   <component name="ProjectId" id="2HUpR5RVb8rUgqxILFZIke7kBns" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -70,7 +72,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MeetingTest">
+  <component name="RunManager" selected="JUnit.MeetingTest.checkUnavailableRoomStatus">
+    <configuration name="MeetingTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS4004-Project3" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MeetingTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MeetingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -93,31 +104,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest.CheckThatPhoneNumberIsntRepeated" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MeetingTest.checkRoomStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="CheckThatPhoneNumberIsntRepeated" />
+      <option name="METHOD_NAME" value="checkRoomStatus(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MeetingTest.checkPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MeetingTest.checkUnavailableRoomStatus" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS4004-Project3" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="checkPassword" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MeetingTest.checkTimeBounds" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS4004-Project3" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MeetingTest" />
-      <option name="METHOD_NAME" value="checkTimeBounds" />
+      <option name="METHOD_NAME" value="checkUnavailableRoomStatus(int)" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,11 +126,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MeetingTest.checkUnavailableRoomStatus" />
+        <item itemvalue="JUnit.MeetingTest.checkRoomStatus" />
+        <item itemvalue="JUnit.MeetingTest (1)" />
         <item itemvalue="JUnit.MeetingTest" />
         <item itemvalue="JUnit.MeetingTest.CheckThatAttendantsLessThanCapacity" />
-        <item itemvalue="JUnit.MeetingTest.CheckThatPhoneNumberIsntRepeated" />
-        <item itemvalue="JUnit.MeetingTest.checkTimeBounds" />
-        <item itemvalue="JUnit.MeetingTest.checkPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -145,6 +146,7 @@
       <workItem from="1668543772261" duration="5835000" />
       <workItem from="1668607271691" duration="4857000" />
       <workItem from="1668633946097" duration="2149000" />
+      <workItem from="1668882210415" duration="1610000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <created>1668349534659</created>

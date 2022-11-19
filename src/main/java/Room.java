@@ -6,12 +6,6 @@ public class Room {
 
     }
     private boolean status;
-    public boolean getStatus() {
-        return status;
-    }
-    public boolean setStatus() {
-        return status;
-    }
     public void setStatus(boolean status) {
         this.status = status;
     }
@@ -21,8 +15,6 @@ public class Room {
         this.status = status;
         this.number = number;
     }
-
-
     @Override
     public String toString() {
         return name;

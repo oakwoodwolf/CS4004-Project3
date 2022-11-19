@@ -1,14 +1,12 @@
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.util.ArrayList;
 
-import static java.time.LocalTime.*;
+import static java.time.LocalTime.*;;
 import static org.junit.jupiter.api.Assertions.*;
 
 class MeetingTest {
@@ -40,13 +38,6 @@ class MeetingTest {
         }
         assertEquals(0, containsDupe);
     }
-    Meeting nm;
-    @BeforeEach
-    void setUp()
-    {
-        nm = new Meeting();
-    }
-
     @Test
     void checkTimeBounds() {
         for (int i = 0; i < m.meetings.size(); i++){
@@ -76,10 +67,17 @@ class MeetingTest {
          assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  now().minusHours(1), now()), ""), "Using null password.");
          assertFalse(m.addMeeting(new Meeting("Sample", m.rooms.get(2), LocalDate.now(),  now().minusHours(1), now()), "NULCSIS02"), "Using password that contains right characters but isn't exact");
         }
-    //@ParameterizedTest
-    //@ValueSource((20,00,00))
-    //void checkRepeatTime(LocalTime st1)
-    {
-        //assertTrue(nm.checkAvailability(st1));
-    }
+        @ParameterizedTest
+        @ValueSource(ints = {1,3,5})
+        void checkRoomStatus(int n)
+        {
+            assertEquals(true,m.getRoomNumber(n),"Room is available");
+
+        }
+        @ParameterizedTest
+        @ValueSource(ints = {2,4})
+        void checkUnavailableRoomStatus(int n)
+        {
+            assertEquals(false,m.getRoomNumber(n),"Room is not available");
+        }
 }

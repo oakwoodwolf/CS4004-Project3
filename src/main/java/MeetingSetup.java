@@ -13,11 +13,11 @@ public class MeetingSetup {
 
         Room compApple = new Room("Apple Computer Room", 24,true,1);
         rooms.add(compApple);
-        Room compWindows = new Room("Windows Computer Lab", 24,true,2);
+        Room compWindows = new Room("Windows Computer Lab", 24,false,2);
         rooms.add(compWindows);
         Room conference_room = new Room("Conference Room", 48,true,3);
         rooms.add(conference_room);
-        Room office0 = new Room("Manager's Office", 4,true,4);
+        Room office0 = new Room("Manager's Office", 4,false,4);
         rooms.add(office0);
         Room online = new Room("Online [Microsoft Teams]", 128,true,5);
         rooms.add(online);
@@ -46,5 +46,21 @@ public class MeetingSetup {
             meetings.add(meeting);
             return true;
         } else System.out.println("Only staff can add meetings"); return false;
+    }
+    public boolean getRoomNumber(int n)
+    {
+        if(n==1)
+            return true;
+        else if (n==2)
+            return false;
+        else if(n==3)
+            return true;
+        else if(n==4)
+            return false;
+        else if(n==5)
+            return true;
+        else
+            return false;
+
     }
 }
