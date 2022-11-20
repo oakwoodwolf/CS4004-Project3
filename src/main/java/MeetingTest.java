@@ -97,6 +97,10 @@ class MeetingTest {
         @ValueSource(ints = {1,5,10})
         void changeMeetingDate(int t)
         {
-            assertEquals(LocalDate.of(2022,11,19+t),m.changeDate(t));
+            LocalDate test = LocalDate.of(2022,11,19+t);
+            for (int i = 0; i < m.meetings.size(); i++){
+                m.meetings.get(i).setAppointDate(test);
+                assertSame(m.meetings.get(i).getAppointDate(), test);
+            }
         }
 }

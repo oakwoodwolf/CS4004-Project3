@@ -5,8 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="231bc31b-626b-406f-ae43-9166e3cb99e8" name="Changes" comment="Updated time bounds">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingSetup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MeetingTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MeetingTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +71,9 @@
   </component>
   <component name="RunManager" selected="JUnit.MeetingTest.changeMeetingDate">
     <configuration name="MeetingTest.changeMeetingDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS4004-Project3" />
+      <module name="Project" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MeetingTest" />
       <option name="METHOD_NAME" value="changeMeetingDate(int)" />
@@ -256,7 +256,7 @@
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/main/java/MeetingTest.java</url>
           <line>97</line>
-          <properties class="MeetingTest" method="changeMeetingDate">
+          <properties class="MeetingTest">
             <option name="EMULATED" value="true" />
             <option name="WATCH_EXIT" value="false" />
           </properties>
